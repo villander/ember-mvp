@@ -4,6 +4,6 @@ import allGamesQuery from '../gql/all-games';
 
 export default Route.extend(RouteQueryManager, {
   model() {
-    return this.apollo.watchQuery({ query: allGamesQuery });
+    return this.get('apollo').watchQuery({ query: allGamesQuery });
   }
 });
