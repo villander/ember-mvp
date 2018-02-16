@@ -1,13 +1,19 @@
 {{log model}}
-{{#each model as |game|}}
-  <div class="row">
-  <div>
-    Game #{{game.id}}
-  </div>
-  <div>
-    Round {{game.currentRound.number}}
-  </div>
+<div class="card">
+  <ul>
+    {{#each model.allGames as |game|}}
+      <li>
+        <div class="row">
+          <div>
+            Game #{{game.id}}
+          </div>
+          <div>
+            Round {{game.currentRound.number}}
+          </div>
+        </div>
+      </li>
+    {{/each}}
+  </ul>
 </div>
-{{/each}}
 
 {{outlet}}
